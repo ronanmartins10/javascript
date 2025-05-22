@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade pra votar</title>
+    <style>
+        body{
+            font: normal 15pt arial;
+            background-color: rgb(30, 30, 114);
+            color: white;
+            
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consulte sua idade</h1>
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="consultar" onclick="consultar()">
+    <div id="res"></div>
+
+    <script>
+        function consultar() {
+            var txtcon = window.document.getElementById('idade')
+            var res = window.document.getElementById('res')
+            var idades = Number(idade.value)
+           
+            if (idades < 16) {
+                 res.innerHTML = `Sua idade é de <strong>${idades} anos</strong>, então você não pode votar!`
+            } else if (idades < 18 || idades > 65) {
+                  res.innerHTML = `Sua idade é de <strong>${idades} anos</strong>, então você pode escolher se quer votar ou não`
+            } else {
+                 res.innerHTML = `Sua idade é de <strong>${idades} anos</strong>, então você é obrigado a votar`
+            }
+              
+        }
+    </script>
+
+</body>
+</html>
