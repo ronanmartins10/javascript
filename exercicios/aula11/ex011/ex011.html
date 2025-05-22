@@ -44,13 +44,13 @@
     <div id="Resultado"></div>
 
     <script>
-        let n = window.prompt('Qual seu nome?');
+        var n = window.prompt('Qual seu nome?');
 
         function consultar() {
-            let Brasil = 'brasil'; // tudo em minúsculas
-            let txtbr = document.getElementById('txtn1');
-            let msg = document.getElementById('msg');
-            let pais = txtbr.value.toLowerCase(); // converte o valor digitado para minúsculo
+            var Brasil = 'brasil'; // tudo em minúsculas
+            var txtbr = document.getElementById('txtn1');
+            var msg = document.getElementById('msg');
+            var pais = txtbr.value.toLowerCase(); // converte o valor digitado para minúsculo
 
             msg.innerHTML = `<p>Você tem nacionalidade do(a): <strong>${txtbr.value}</strong></p>`;
 
