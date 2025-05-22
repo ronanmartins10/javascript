@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificando Nacionalidade</title>
-    <script src="meuscript.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade!</title>
+    <style> 
+        body {
+            background: rgb(29, 21, 104);
+            font: normal 20px verdana;
+            color: black;
+        }
+
+        h1 {
+            font: normal 28pt verdana;
+            color: white;
+        }
+
+        p {
+            font: normal 25pt Arial;
+            color: rgb(221, 219, 230);
+            width: 600px;
+            height: 40px;
+        }
+
+        input {
+            background: wheat;
+            color: rgb(36, 41, 36);
+            font: normal 15pt arial;
+            width: 120px;
+        }
+
+        div#msg {
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>Nacionalidade</h1>
-  <strong>De qual país você é? <input type="text" name="país" id="país"></strong>
-    <input type="button" value="Verificar" onclick="calcular()">
-    <div id="res">
+    Qual seu país de origem?: <input type="text" name="txtn1" id="txtn1">
+    <input type="button" value="Checar" onclick="consultar()">
+    <div id="msg"></div>
+    <div id="Resultado"></div>
+
+    <script>
+        let n = window.prompt('Qual seu nome?');
+
+        function consultar() {
+            let Brasil = 'brasil'; // tudo em minúsculas
+            let txtbr = document.getElementById('txtn1');
+            let msg = document.getElementById('msg');
+            let pais = txtbr.value.toLowerCase(); // converte o valor digitado para minúsculo
+
+            msg.innerHTML = `<p>Você tem nacionalidade do(a): <strong>${txtbr.value}</strong></p>`;
+
+            if (pais === Brasil) {
+                msg.innerHTML += `${n},  você é Brasileiro, seja bem-vindo!!`;
+            } else {
+                msg.innerHTML += `${n}, seu país é: ${txtbr.value}, você é ESTRANGEIRO!!`;
+            }   
+        }
+    </script>
 </body>
 </html>
