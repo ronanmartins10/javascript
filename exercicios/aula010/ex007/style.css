@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body{
+    font: normal 18pt arial;
+    background-color: rgb(30, 30, 114);
+    color: white;
+    text-align: center;
+}
+
+input{
+    font: normal 18pt Arial;
+    width: 100px;
+}
+
+div#res{
+    margin-top: 20px;
+} 
